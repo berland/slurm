@@ -513,6 +513,7 @@ sub print_job_full
 	printf "\tinteractive = True\n" if !$job->{'batch_flag'};
 
 	printf("\tjob_state = %s\n", $job->{'stateCode'});
+	printf("\tExit_status = %s\n", $job->{'exit_code'});
 	printf("\tqueue = %s\n", $job->{'partition'});
 
 	printf("\tqtime = %s\n", hRTime($job->{'submit_time'}));
